@@ -1,11 +1,16 @@
+
 function getComputerChoice() {
     let x = Math.random()
 
     if (x < 0.33) {
-        return 'Rock'
+        return 'rock'
     } else if (x < 0.66) {
-        return 'Paper'
+        return 'paper'
     } else {
-        return 'Scissors'
+        return 'scissors'
     }
+}
+
+function getHumanChoice() {
+    return prompt('rock, paper or scissors?')
 }
