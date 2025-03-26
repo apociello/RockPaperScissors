@@ -1,1 +1,1 @@
-# RockPaperScissors
+This is the Rock Paper Scissors game built with javascript made to play in the console 
