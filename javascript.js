@@ -74,6 +74,22 @@ let human = humanChoice.toLowerCase();
         console.log('Computer Score: ' + computerScore)
     }
     }
-    
-    
-   
+
+
+function playGame() {
+    playRound(getHumanChoice(), getComputerChoice())
+    playRound(getHumanChoice(), getComputerChoice())
+    playRound(getHumanChoice(), getComputerChoice())
+    playRound(getHumanChoice(), getComputerChoice())
+    playRound(getHumanChoice(), getComputerChoice())
+  
+    if (humanScore === computerScore) {
+        console.log('FINAL RESULT: DRAW')
+    } else if (humanScore > computerScore) {
+        console.log('FINAL RESULT: HUMAN WINS')
+    } else {
+        console.log('FINAL RESULT: COMPUTER WINS')
+    }
+}
+
+playGame()
