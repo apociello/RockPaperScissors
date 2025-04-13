@@ -76,7 +76,7 @@ let human = humanChoice.toLowerCase();
     }
 
 
-function playGame() {
+/*function playGame() {
     playRound(getHumanChoice(), getComputerChoice())
     playRound(getHumanChoice(), getComputerChoice())
     playRound(getHumanChoice(), getComputerChoice())
@@ -91,5 +91,20 @@ function playGame() {
         console.log('FINAL RESULT: COMPUTER WINS')
     }
 }
-
 playGame()
+*/ 
+
+const rockBtn = document.querySelector("#rock");
+rockBtn.addEventListener("click", () => {
+    playRound('rock', getComputerChoice())
+})
+
+const paperBtn = document.querySelector("#paper");
+paperBtn.addEventListener("click", () => {
+    playRound('paper', getComputerChoice())
+})
+
+const scissorsBtn = document.querySelector("#scissors");
+scissorsBtn.addEventListener("click", () => {
+    playRound('scissors', getComputerChoice())
+})
