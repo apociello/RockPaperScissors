@@ -1,4 +1,13 @@
 
+
+let output = document.querySelector("#output");
+let p1 = document.querySelector("#p1");
+let p2 = document.querySelector("#p2");
+let p3 = document.querySelector("#p3");
+let p4 = document.querySelector("#p4");
+
+
+
 function getComputerChoice() {
     let x = Math.random()
 
@@ -19,59 +28,60 @@ let humanScore = 0;
 let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
-let human = humanChoice.toLowerCase();
+
+    let human = humanChoice.toLowerCase();
 
     if (human ==='rock' && computerChoice === 'rock'){
-        console.log('The computer says: Rock')
-        console.log('Draw')
-        console.log('Human Score: ' + humanScore)
-        console.log('Computer Score: ' + computerScore)
+
+        p1.textContent = 'The computer says: Rock';
+        p2.textContent = 'Draw';
+        p3.textContent = `Human Score: ${humanScore} || Computer Score: ${computerScore}`;
+
     } else if (human === 'rock' && computerChoice === 'paper') {
-        console.log('The computer says: Paper')
-        console.log('You lose! Paper beats Rock')
+        p1.textContent = 'The computer says: Paper';
+        p2.textContent = 'You lose! Paper beats Rock';
         computerScore += 1
-        console.log('Human Score: ' + humanScore)
-        console.log('Computer Score: ' + computerScore)
+        p3.textContent = `Human Score: ${humanScore} || Computer Score: ${computerScore}`;
+
     } else if (human === 'rock' && computerChoice === 'scissors') {
-        console.log('The computer says: Scissors')
-        console.log('You win! Rock beats Scissors')
+        p1.textContent = 'The computer says: Scissors';
+        p2.textContent = 'You win! Rock beats Scissors';
         humanScore += 1
-        console.log('Human Score: ' + humanScore)
-        console.log('Computer Score: ' + computerScore)
+        p3.textContent = `Human Score: ${humanScore} || Computer Score: ${computerScore}`;
+
     } else if (human === 'paper' && computerChoice === 'rock') {
-        console.log('The computer says: Rock')
-        console.log('You win! Paper beats Rock') 
+        p1.textContent = 'The computer says: Rock';
+        p2.textContent = 'You win! Paper beats Rock';
         humanScore += 1
-        console.log('Human Score: ' + humanScore)
-        console.log('Computer Score: ' + computerScore)
+        p3.textContent = `Human Score: ${humanScore} || Computer Score: ${computerScore}`;
+
     } else if (human === 'paper' && computerChoice === 'paper') {
-        console.log('The computer says: Paper')
-        console.log('Draw')
-        console.log('Human Score: ' + humanScore)
-        console.log('Computer Score: ' + computerScore)
+        p1.textContent = 'The computer says: Paper';
+        p2.textContent = 'Draw';
+        p3.textContent = `Human Score: ${humanScore} || Computer Score: ${computerScore}`;
+
     } else if (human === 'paper' && computerChoice === 'scissors') {
-        console.log('The computer says: Scissors')
-        console.log('You lose! Scissors beats Paper')
+        p1.textContent = 'The computer says: Scissors';
+        p2.textContent = 'You lose! Scissors beats Paper';
         computerScore += 1
-        console.log('Human Score: ' + humanScore)
-        console.log('Computer Score: ' + computerScore)
+        p3.textContent = `Human Score: ${humanScore} || Computer Score: ${computerScore}`;
+
     } else if (human === 'scissors' && computerChoice === 'rock') {
-        console.log('The computer says: rock')
-        console.log('You lose! Rock beats Scissors')
+        p1.textContent = 'The computer says: rock';
+        p2.textContent = 'You lose! Rock beats Scissors';
         computerScore += 1
-        console.log('Human Score: ' + humanScore)
-        console.log('Computer Score: ' + computerScore)
+        p3.textContent = `Human Score: ${humanScore} || Computer Score: ${computerScore}`;
+
     } else if (human === 'scissors' && computerChoice === 'paper') {
-        console.log('The computer says: Paper')
-        console.log('You win! Scissors beats Paper')
+        p1.textContent = 'The computer says: Paper';
+        p2.textContent = 'You win! Scissors beats Paper';
         humanScore += 1
-        console.log('Human Score: ' + humanScore)
-        console.log('Computer Score: ' + computerScore)
+        p3.textContent = `Human Score: ${humanScore} || Computer Score: ${computerScore}`;
+
     } else if (human === 'scissors' && computerChoice === 'scissors') {
-        console.log('The computer says: Scissors')
-        console.log('Draw') 
-        console.log('Human Score: ' + humanScore)
-        console.log('Computer Score: ' + computerScore)
+        p1.textContent = 'The computer says: Scissors';
+        p2.textContent = 'Draw';
+        p3.textContent = `Human Score: ${humanScore} || Computer Score: ${computerScore}`;
     }
     }
 
@@ -108,3 +118,4 @@ const scissorsBtn = document.querySelector("#scissors");
 scissorsBtn.addEventListener("click", () => {
     playRound('scissors', getComputerChoice())
 })
+
