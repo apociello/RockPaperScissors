@@ -5,7 +5,7 @@ let p1 = document.querySelector("#p1");
 let p2 = document.querySelector("#p2");
 let p3 = document.querySelector("#p3");
 let p4 = document.querySelector("#p4");
-let h2 = document.querySelector('h2');
+let h1 = document.querySelector('h1');
 
 const rockBtn = document.querySelector("#rock");
 rockBtn.addEventListener("click", () => {
@@ -40,8 +40,8 @@ function getComputerChoice() {
 
 function playRound(humanChoice, computerChoice) {
 
-    if (h2.textContent) {
-        h2.textContent = '';
+    if (h1.textContent) {
+        h1.textContent = '';
         humanScore = 0;
         computerScore = 0;
     }
@@ -106,10 +106,10 @@ function playRound(humanChoice, computerChoice) {
 
 function finalResult(humanScore, computerScore) {
     if (humanScore === computerScore) {
-        h2.textContent = 'FINAL RESULT: DRAW';
+        h1.textContent = 'FINAL RESULT: DRAW';
     } else if (humanScore > computerScore) {
-        h2.textContent = 'FINAL RESULT: HUMAN WINS';
+        h1.textContent = 'FINAL RESULT: HUMAN WINS';
     } else {
-        h2.textContent = 'FINAL RESULT: COMPUTER WINS'
+        h1.textContent = 'FINAL RESULT: COMPUTER WINS'
     }
 }
